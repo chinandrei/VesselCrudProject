@@ -1,0 +1,98 @@
+﻿@model VesselCrudProject.Models.Vessel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Vessel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.s_vessel_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.s_vessel_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.n_brand_x)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.n_brand_x)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.s_profit_center)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.s_profit_center)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.s_imo_number)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.s_imo_number)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.n_vessel_type_idx)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.n_vessel_type_idx)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.d_start_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.d_start_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.d_end_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.d_end_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.b_us_ar)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.b_us_ar)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.s_callsign)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.s_callsign)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.s_vessel_email_address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.s_vessel_email_address)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

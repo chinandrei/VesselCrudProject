@@ -1,0 +1,87 @@
+﻿@model IEnumerable<VesselCrudProject.Models.Vessel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.s_vessel_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.n_brand_x)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.s_profit_center)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.s_imo_number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.n_vessel_type_idx)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.d_start_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.d_end_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.b_us_ar)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.s_callsign)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.s_vessel_email_address)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.s_vessel_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.n_brand_x)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.s_profit_center)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.s_imo_number)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.n_vessel_type_idx)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.d_start_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.d_end_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.b_us_ar)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.s_callsign)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.s_vessel_email_address)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
